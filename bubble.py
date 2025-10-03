@@ -24,7 +24,7 @@ for cnt in contours:
     x, y, w, h = cv2.boundingRect(cnt)
 
     # Filter bubbles by size
-    if 20 < w < 50 and 20 < h < 50:
+    if 20 < w < 60 and 20 < h < 60:
         roi = thresh[y:y+h, x:x+w]
         white = cv2.countNonZero(roi)
         total = w * h
